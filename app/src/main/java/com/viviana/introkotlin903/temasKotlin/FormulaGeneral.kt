@@ -30,7 +30,7 @@ fun main() {
         }
 
     } while (a == 0.0 || discriminante < 0)
-    
+
     val x1 = (-b + sqrt(discriminante)) / (2 * a)
     val x2 = (-b - sqrt(discriminante)) / (2 * a)
 
