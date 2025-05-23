@@ -60,8 +60,7 @@
         android:id="@+id/tvTarjeta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="Tarjeta cineco"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtCantidadCompra" />
@@ -75,6 +74,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTarjeta">
 
+        <RadioButton
+            android:id="@+id/rbSi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Si" />
+
+        <RadioButton
+            android:id="@+id/rbNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="No" />
     </RadioGroup>
 
     <TextView
@@ -113,8 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:onClick="calcularTotal"
-        android:text="$ xxx.xx"
+        android:text="$ 0.0"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTotal" />
@@ -124,27 +135,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:onClick="calcularTotal"
+        android:onClick="30"
         android:text="Calcular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTotalPagar" />
-
-    <RadioButton
-        android:id="@+id/rbNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No"
-        app:layout_constraintStart_toEndOf="@+id/rbSi"
-        tools:layout_editor_absoluteY="228dp" />
-
-    <RadioButton
-        android:id="@+id/rbSi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:text="Si"
-        app:layout_constraintStart_toEndOf="@+id/tvTarjeta"
-        tools:layout_editor_absoluteY="229dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
