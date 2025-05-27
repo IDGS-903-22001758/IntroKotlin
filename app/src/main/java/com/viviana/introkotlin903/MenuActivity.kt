@@ -12,6 +12,7 @@ import com.viviana.introkotlin903.practica1.saludoActivity
 import com.viviana.introkotlin903.practica2.OperasActivity
 import com.viviana.introkotlin903.practica3.ejemplo3Activity
 import com.viviana.introkotlin903.practica4.ArchivosActivity
+import com.viviana.introkotlin903.practica5_diccionario.DiccionarioActivity
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,11 +40,20 @@ class MenuActivity : AppCompatActivity() {
 
         btnArchivos.setOnClickListener{navegateToArchivos()}
 
+        val btnDiccionario = findViewById<Button>(R.id.btn6)
+
+        btnDiccionario.setOnClickListener { navegateToDiccionario() }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+    }
+
+    private fun navegateToDiccionario() {
+        val intent = Intent(this,DiccionarioActivity::class.java)
+        startActivity(intent)
     }
 
     private fun navegateToArchivos() {
